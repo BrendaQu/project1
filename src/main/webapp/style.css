@@ -1,0 +1,204 @@
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+body{
+    background-color: #FEFFFF;
+}
+
+nav {
+    background-color: #2B7A78;
+}
+.nav-link:hover {
+    color: #17252A !important;
+  }
+
+.carousel-inner {
+    height: 455px;
+} 
+
+.carousel-caption{
+    text-align: center;
+    top: 100px;
+    bottom: auto;
+} 
+
+.carousel-caption h1 {
+    font-size: 70px;
+    color: #FEFFFF;
+}
+.carousel-caption p {
+    color: #EFD200;
+    font-size:25px;
+}
+
+/*footer*/
+
+footer {
+    margin-top: 0%;
+    background-color: #FEFFFF;
+    width: 100%;
+    height: 40px;
+}
+
+footer h6{
+    color: #2B7A78;
+    float: left;
+    text-align: center;
+    padding: 10px;
+    margin: 5px 2px;
+}
+
+.fa {
+    color: #2B7A78;
+    float: right;
+    padding: 10px;
+    width: 40px;
+    text-align: center;
+    margin: 5px 2px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.fa:hover {
+    color: #3AAFA9;
+    opacity: 0.7;
+}
+
+/*Login Page*/
+.btn {
+    border: none;
+}
+.btn:hover, .btn:focus {
+    background-color: #3AAFA9;
+
+}
+.btn-primary {
+    background-color: #EFD200;
+}
+
+.btn-prmary:hover {
+    background-color:#3AAFA9;
+    box-shadow: 0px 1px 1px #3AAFA9;
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type=""]:focus  {
+    border-color: #3AAFA9;
+    box-shadow: 0 2px 2px #3AAFA9;
+    outline: none;
+}
+.btn.btn-primary:focus {
+    border-color: #3AAFA9;
+    box-shadow: 0 1px 1px #3AAFA9;
+    outline: none;
+}
+
+.btn {
+    font-size: 18px;
+}
+
+.login-wrapper input[type="text"], input[type="password"] {
+    text-align: center;
+}
+
+
+.login-wrapper {
+    margin:auto;
+    margin-top: 50px;
+    width: 30%;
+    height: 405px;
+    text-align: center;
+}
+
+.login-wrapper input {
+    margin: 5px 0px;
+}
+
+.login-wrapper h2 {
+    color: #2B7A78;
+}
+
+/*Employee Page*/
+.profile-wrapper {
+    padding-top: 10px;
+    height: 120px;
+    width: 100%;
+}
+
+.profile-img {
+    text-align: center;
+}
+
+.profile-img img{
+    width: 40%;
+    border-radius: 50px;
+}
+
+.profile-img h3 {
+    font-size: 1em;
+    color: #17252A;
+}
+
+.profile-info-item1 p, .profile-info-item2 p {
+    font-size: 12px;
+    margin: 5px 0px;
+    text-align: left;
+    color: #17252A;
+}
+
+/*Employee Page*/
+.expense-btn .p2 {
+    margin: 10px;
+}
+
+.expense-history h2 {
+    color:  #2B7A78;
+}
+
+.btn a {
+    text-decoration: none;
+    color: #FEFFFF;
+}
+
+/*Expense Form*/
+.expense-wrapper {
+    width: 50%;
+    margin: auto;
+    padding: 15px;
+}
+
+.expense-wrapper button {
+    margin-top: 10px;
+}
+
+/*Manger Page*/
+.manger-menu {
+    display: flex;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+}
+
+.manger-menu > button {
+    margin: 10px;
+}
+.manger-menu .btn {
+    outline: #EFD200;
+    border: 2px solid #EFD200;
+}
+
+.manger-menu .btn a {
+    color: #EFD200;
+    padding: 50px 10px;
+}
+
+.manger-menu .btn:hover {
+    background-color:#EFD200;
+    box-shadow: 0px 1px 1px #EFD200;
+}
+
+.manger-menu a:hover{
+    color: #FEFFFF;
+}
