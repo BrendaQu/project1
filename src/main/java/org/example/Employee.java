@@ -1,16 +1,16 @@
 package org.example;
 
 import javax.persistence.*;
+import java.util.Set;
 
 @Entity
+@Table(name="employees")
 public class Employee {
     @Id
     @Column(name = "empId")
-    @OneToMany(cascade=CascadeType.ALL)
-    @JoinColumn(name="empId")
     private int empId;
     private String name;
-    @Column(unique=true)
+    @Column(unique=true, name="email")
     private String email;
     private String password;
     private String empStartDate;
@@ -18,6 +18,8 @@ public class Employee {
     private String country;
     private String title;
     private String type;
+    @OneToMany(mappedBy="employee")
+    private Set<Request> requests;
 
     public Employee() {}
 

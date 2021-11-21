@@ -15,7 +15,7 @@ public class App
     {
         System.out.println( "project stated..." );
 
-      /*  Configuration cfg = new Configuration();
+        Configuration cfg = new Configuration();
         cfg.configure("hibernate.cfg.xml");
 
         SessionFactory factory = cfg.buildSessionFactory();
@@ -23,16 +23,16 @@ public class App
 
         Session session = factory.openSession();
 
-        Transaction t = session.beginTransaction();*/
+        Transaction t = session.beginTransaction();
 
-        Integer id = 113;
-        String name = "Ava Lopez";
-        String email = "ava@one.com";
-        String password = "password12";
-        String empStartDate = "07/11/2019";
-        String phone = "(888) 888-8888";
+        Integer id = 115;
+        String name = "Emma Li";
+        String email = "emma@one.com";
+        String password = "password15";
+        String empStartDate = "03/10/2016";
+        String phone = "(777) 777-7777";
         String country = "United States";
-        String title = "Account Manager";
+        String title = "Chief Executive Officer";
         String type = "regular";
 
 

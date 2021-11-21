@@ -1,16 +1,18 @@
 package org.example;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
-@Table(name = "Requests")
+@Table(name = "requests")
 public class Request {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "requestId")
-    @ManyToOne
-    private int empId;
     private int requestId;
+    @ManyToOne
+    @JoinColumn(name="empId")
+    private Employee employee;
     private float expense;
     private String incStartDate;
     private String incEndDate;
