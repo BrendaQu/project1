@@ -97,7 +97,7 @@ public class AllPendingRequestsServlet extends HttpServlet {
                     "<td>" + r.getIncStartDate() + "</td>" +
                     "<td>" + r.getIncEndDate() + "</td>" +
                     "<td>" + r.getPurpose() + "</td>" +
-                    "<td>" + r.getExpense() + "</td>" +
+                    "<td>$" + r.getExpense() + "</td>" +
                     "<td>" + r.getSubmitDate() + "</td>" +
                     "<td>" + r.getStatus() + "</td>");
         }

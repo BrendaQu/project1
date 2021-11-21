@@ -1,5 +1,6 @@
 package org.example;
 
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -13,6 +14,10 @@ public class PendingRequestApprovals extends HttpServlet {
         PrintWriter out = response.getWriter();
 
         List<Request> requests = HibernateUtil.getAllPendingRequests();
+        Cookie[] cookies = request.getCookies();
+        Integer empId = Integer.valueOf(cookies[0].getValue());
+
+        Employee employee = HibernateUtil.getEmployeeById(empId);
 
         out.println("<!DOCTYPE html>\n" +
                 "<html lang=\"en\">\n" +
@@ -53,16 +58,16 @@ public class PendingRequestApprovals extends HttpServlet {
                 "        <div class=\"row\">\n" +
                 "        <div class=\"profile-img col-2\">\n" +
                 "            <img src=\"img/profile.jpg\">\n" +
-                "            <h3>Name</h3>\n" +
+                "            <h3>"+employee.getName()+"</h3>\n" +
                 "        </div>\n" +
                 "        <div class=\"profile-info-item1 col-2\">\n" +
-                "                <p>Title: Software Developer</p>\n" +
-                "                <p>Start Date: 01/12/2019</p>\n" +
-                "                <p>Country: United States</p>\n" +
+                "                <p>Title:"+ employee.getTitle()+ "</p>\n" +
+                "                <p>Start Date:" + employee.getEmpStartDate()+"</p>\n" +
+                "                <p>Country:" + employee.getCountry()+"</p>\n" +
                 "        </div>\n" +
                 "        <div class=\"profile-info-item2 col-8\">\n" +
-                "            <p>Email: mark@one.com</p>\n" +
-                "            <p>Phone: (555) 555-5555</p>\n" +
+                "            <p>Email:" + employee.getEmail() +"</p>\n" +
+                "            <p>Phone:" + employee.getPhone()+"</p>\n" +
                 "        </div>\n" +
                 "        </div>\n" +
                 "    </div>\n" +
@@ -88,7 +93,7 @@ public class PendingRequestApprovals extends HttpServlet {
                         "<td>" + r.getIncStartDate() + "</td>" +
                         "<td>" + r.getIncEndDate() + "</td>" +
                         "<td>" + r.getPurpose() + "</td>" +
-                        "<td>" + r.getExpense() + "</td>" +
+                        "<td> $" + r.getExpense() + "</td>" +
                         "<td>" + r.getSubmitDate() + "</td>" +
                         "<td>" + r.getStatus() + "</td>");
             }
