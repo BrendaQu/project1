@@ -20,4 +20,13 @@
         <servlet-name>AddExpenseRequestServlet</servlet-name>
         <url-pattern>/AddExpenseRequestServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AllPendingRequestsServlet</servlet-name>
+        <servlet-class>org.example.AllPendingRequestsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AllPendingRequestsServlet</servlet-name>
+        <url-pattern>/AllPendingRequestsServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

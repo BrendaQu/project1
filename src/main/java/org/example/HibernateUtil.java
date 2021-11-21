@@ -50,6 +50,23 @@ public class HibernateUtil {
 
     }
 
+    public static Employee getEmployeeById(int empId){
+        Employee employee = new Employee();
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+        Transaction txn = session.beginTransaction();
+        String hql = "from Employee where empId= :empId";
+        Query query = session.createQuery(hql);
+        query.setParameter("empId", empId);
+        List employees = query.list();
+        employee = (Employee) employees.get(0);
+
+        txn.commit();
+        session.close();
+        return employee;
+
+    }
+
     public static void addRequest(int empId, Request request){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();
@@ -62,5 +79,40 @@ public class HibernateUtil {
         txn.commit();
         session.close();
 
+    }
+
+    public static List<Request> getAllRequests(int empId){
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        String hql = "from Request where empId= :empId";
+        Query query = session.createQuery(hql);
+        query.setParameter("empId", empId);
+        List requests = query.list();
+
+        txn.commit();
+        session.close();
+
+        return requests;
+    }
+
+    public static List<Request> getPendingRequests(int empId){
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        String hql = "from Request where empId= :empId AND status= :status";
+        Query query = session.createQuery(hql);
+        query.setParameter("empId", empId);
+        query.setParameter("status", "pending");
+        List requests = query.list();
+
+        txn.commit();
+        session.close();
+
+        return requests;
     }
 }

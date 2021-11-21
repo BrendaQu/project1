@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 
 public class EmployeeLoginServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
@@ -51,7 +52,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n" +
                     "                <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\n" +
                     "                    <li class=\"nav-item\">\n" +
-                    "                        <a class=\"nav-link\" href=\"employee-page.html\"></a>\n" +
+                    "                        <a class=\"nav-link\" href=\"EmployeeLoginServlet\">Report</a>\n" +
                     "                    </li>\n" +
                     "                    <li class=\"nav-item\">\n" +
                     "                        <a class=\"nav-link\" href=\"index.html\">Logout</a>\n" +
@@ -79,7 +80,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "    </div>\n" +
                     "    <div class=\"expense-btn d-flex justify-content-end\">\n" +
                     "        <button class=\"btn btn-primary p2\"><a href=\"expense-form.html\">New Expense</a></button>\n" +
-                    "        <button class=\"btn btn-primary p2\"><a href=\"employee-page-pending.html\">View Pending Requests</a></button>\n" +
+                    "        <button class=\"btn btn-primary p2\"><a href=\"AllPendingRequestsServlet\">View Pending Requests</a></button>\n" +
                     "    </div>\n" +
                     "    <div class=\"expense-history\">\n" +
                     "        <h2>Expense Reimbursement History</h2>\n" +
@@ -95,35 +96,20 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "                <th>Status</th>\n" +
                     "              </tr>\n" +
                     "            </thead>\n" +
-                    "            <tbody>\n" +
-                    "              <tr>\n" +
-                    "                <td>1</td>\n" +
-                    "                <td>01/15/20</td>\n" +
-                    "                <td>01/17/20</td>\n" +
-                    "                <td>Florida Business Travel</td>\n" +
-                    "                <td>$500.30</td>\n" +
-                    "                <td>01/19/20</td>\n" +
-                    "                <td>Approved</td>\n" +
-                    "              </tr>\n" +
-                    "              <tr>\n" +
-                    "                <td>2</td>\n" +
-                    "                <td>02/01/21</td>\n" +
-                    "                <td>02/01/21</td>\n" +
-                    "                <td>Client Dinner</td>\n" +
-                    "                <td>$100.80</td>\n" +
-                    "                <td>02/02/21</td>\n" +
-                    "                <td>Approved</td>\n" +
-                    "              </tr>\n" +
-                    "              <tr>\n" +
-                    "                <td>3</td>\n" +
-                    "                <td>11/17/21</td>\n" +
-                    "                <td>11/18/21</td>\n" +
-                    "                <td>Confernce Expense</td>\n" +
-                    "                <td>$300.30</td>\n" +
-                    "                <td>011/19/21</td>\n" +
-                    "                <td>Pending</td>\n" +
-                    "              </tr>\n" +
-                    "            </tbody>\n" +
+                    "            <tbody>\n");
+
+            List<Request> allRequests = HibernateUtil.getAllRequests(employee.getId());
+            for(Request r : allRequests){
+                out.println("<tr>" +
+                            "<td>" + r.getRequestId() + "</td>" +
+                            "<td>" + r.getIncStartDate() + "</td>" +
+                            "<td>" + r.getIncEndDate() + "</td>" +
+                            "<td>" + r.getPurpose() + "</td>" +
+                            "<td>" + r.getExpense() + "</td>" +
+                            "<td>" + r.getSubmitDate() + "</td>" +
+                            "<td>" + r.getStatus() + "</td>");
+            }
+            out.println("</tbody>\n" +
                     "          </table>\n" +
                     "    </div>\n" +
                     "\n" +
