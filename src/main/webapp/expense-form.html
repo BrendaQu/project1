@@ -54,7 +54,7 @@
         </div>
     </div>
     <div class="expense-wrapper">
-        <form>
+        <form method="post" action="AddExpenseRequestServlet">
             <div class="form-group">
                 <label for="incStartDate">Incurred Start Date</label>
                 <input class="form-control" type="date" id="incStartDate" name="incStartDate">
@@ -75,7 +75,7 @@
                 <label for="todayDate">Today's Date</label>
                 <input class="form-control" type="date" id="todayDate" name="todayDate">
             </div>
-            <button type="sumit" class="btn btn-primary col-12">submit</button>
+            <button type="submit" class="btn btn-primary col-12">submit</button>
         </form>
     </div>
     <footer>

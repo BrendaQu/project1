@@ -50,10 +50,6 @@ public class App
 
       HibernateUtil.addEmployee(employee);*/
 
-        Employee employee = new Employee();
-
-        employee = HibernateUtil.getEmployee("paul@one.com", "password3");
-        System.out.println(employee.getId() + " " + employee.getName());
 
 
 

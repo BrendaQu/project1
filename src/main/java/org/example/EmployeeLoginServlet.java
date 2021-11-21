@@ -2,6 +2,7 @@ package org.example;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -18,6 +19,10 @@ public class EmployeeLoginServlet extends HttpServlet {
 
         Employee employee = new Employee();
         employee = HibernateUtil.getEmployee(email, password);
+        String empId = String.valueOf(employee.getId());
+
+        Cookie cookie = new Cookie("id", empId);
+        response.addCookie(cookie);
 
         if(employee.getType().equals("regular")) {
             out.println("<!DOCTYPE html>\n" +

@@ -11,4 +11,13 @@
         <servlet-name>EmployeeLoginServlet</servlet-name>
         <url-pattern>/EmployeeLoginServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>AddExpenseRequestServlet</servlet-name>
+        <servlet-class>org.example.AddExpenseRequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>AddExpenseRequestServlet</servlet-name>
+        <url-pattern>/AddExpenseRequestServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -1,6 +1,8 @@
 package org.example;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 @Entity
@@ -19,7 +21,7 @@ public class Employee {
     private String title;
     private String type;
     @OneToMany(mappedBy="employee")
-    private Set<Request> requests;
+    private List<Request> request = new ArrayList<Request>();
 
     public Employee() {}
 
@@ -96,5 +98,13 @@ public class Employee {
     }
     public void setType(String type){
         this.type = type;
+    }
+
+    public List<Request> getRequest() {
+        return request;
+    }
+
+    public void setRequests(List<Request> request) {
+        this.request = request;
     }
 }

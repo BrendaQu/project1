@@ -44,7 +44,23 @@ public class HibernateUtil {
         List employees = query.list();
         employee = (Employee) employees.get(0);
 
+        txn.commit();
+        session.close();
         return employee;
+
+    }
+
+    public static void addRequest(int empId, Request request){
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        Employee employee = session.load(Employee.class, empId);
+        request.setEmployee(employee);
+        session.save(request);
+        txn.commit();
+        session.close();
 
     }
 }
