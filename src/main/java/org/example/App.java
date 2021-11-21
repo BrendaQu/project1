@@ -50,7 +50,8 @@ public class App
 
       HibernateUtil.addEmployee(employee);*/
 
-
+/*
+        HibernateUtil.updateRequestStatus(3,"approved");*/
 
 
 

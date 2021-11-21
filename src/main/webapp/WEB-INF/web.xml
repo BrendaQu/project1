@@ -47,4 +47,22 @@
         <servlet-name>PendingRequestApprovals</servlet-name>
         <url-pattern>/PendingRequestApprovals</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ApproveRequestServlet</servlet-name>
+        <servlet-class>org.example.ApproveRequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ApproveRequestServlet</servlet-name>
+        <url-pattern>/ApproveRequestServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>RejectRequestServlet</servlet-name>
+        <servlet-class>org.example.RejectRequestServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RejectRequestServlet</servlet-name>
+        <url-pattern>/RejectRequestServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

@@ -71,6 +71,32 @@ public class PendingRequestApprovals extends HttpServlet {
                 "        </div>\n" +
                 "        </div>\n" +
                 "    </div>\n" +
+                "    <div class=\"approval-reject-form\">\n" +
+                        "        <br />\n" +
+                        "        <h6>Approve</h6>\n" +
+                        "        <form method='post' action='ApproveRequestServlet' class=\"form-inline\">\n" +
+                        "            <div class=\"form-group row\">\n" +
+                        "                <div class=\"col-3\">\n" +
+                        "                    <input class=\"form-control\" type=\"text\" id=\"approve\" name=\"approve\" placeholder=\"Enter Request ID\">\n" +
+                        "                </div>\n" +
+                        "                <div class=\"col\">\n" +
+                        "                    <button type=\"submit\" class=\"btn btn-primary\">Approve</button>\n" +
+                        "                </div>\n" +
+                        "        </form>\n" +
+                        "        </div> \n" +
+                        "        <br />\n" +
+                        "        <h6>Reject</h6>\n" +
+                        "        <form method='post' action='RejectRequestServlet' class=\"form-inline\">\n" +
+                        "            <div class=\"form-group row\">\n" +
+                        "                <div class=\"col-3\">\n" +
+                        "                    <input class=\"form-control\" type=\"text\" id=\"reject\" name=\"reject\" placeholder=\"Enter Request ID\">\n" +
+                        "                </div>\n" +
+                        "                <div class=\"col\">\n" +
+                        "                    <button type=\"submit\" class=\"btn btn-primary\">Reject</button>\n" +
+                        "                </div>\n" +
+                        "        </form>\n" +
+                        "    </div>\n" +
+                        "    <br />"+
                 "    <div class=\"expense-manager-pending\">\n" +
                 "        <h2>Expense Reimbursement Pending</h2>\n" +
                 "        <table class=\"table\">\n" +

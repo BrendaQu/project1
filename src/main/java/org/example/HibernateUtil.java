@@ -148,4 +148,18 @@ public class HibernateUtil {
 
         return requests;
     }
+
+    public static void updateRequestStatus(int requestId, String status){
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        Request request = session.load(Request.class, requestId);
+        request.setStatus((status));
+        session.update(request);
+
+        txn.commit();
+        session.close();
+    }
 }
