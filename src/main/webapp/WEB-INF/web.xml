@@ -29,4 +29,22 @@
         <servlet-name>AllPendingRequestsServlet</servlet-name>
         <url-pattern>/AllPendingRequestsServlet</url-pattern>
     </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ViewRequestHistoryServlet</servlet-name>
+        <servlet-class>org.example.ViewRequestHistoryServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ViewRequestHistoryServlet</servlet-name>
+        <url-pattern>/ViewRequestHistoryServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>PendingRequestApprovals</servlet-name>
+        <servlet-class>org.example.PendingRequestApprovals</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>PendingRequestApprovals</servlet-name>
+        <url-pattern>/PendingRequestApprovals</url-pattern>
+    </servlet-mapping>
 </web-app>

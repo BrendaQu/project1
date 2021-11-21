@@ -115,4 +115,37 @@ public class HibernateUtil {
 
         return requests;
     }
+
+    public static List<Request> getRequestHistory() {
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        String hql = "from Request";
+        Query query = session.createQuery(hql);
+        List requests = query.list();
+
+        txn.commit();
+        session.close();
+
+        return requests;
+    }
+
+    public static List<Request> getAllPendingRequests() {
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        String hql = "from Request where status= :status";
+        Query query = session.createQuery(hql);
+        query.setParameter("status", "pending");
+        List requests = query.list();
+
+        txn.commit();
+        session.close();
+
+        return requests;
+    }
 }
