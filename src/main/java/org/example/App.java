@@ -15,7 +15,7 @@ public class App
     {
         System.out.println( "project stated..." );
 
-        Configuration cfg = new Configuration();
+      /*  Configuration cfg = new Configuration();
         cfg.configure("hibernate.cfg.xml");
 
         SessionFactory factory = cfg.buildSessionFactory();
@@ -48,7 +48,14 @@ public class App
         employee.setTitle(title);
         employee.setType(type);
 
-      HibernateUtil.addEmployee(employee);
+      HibernateUtil.addEmployee(employee);*/
+
+        Employee employee = new Employee();
+
+        employee = HibernateUtil.getEmployee("paul@one.com", "password3");
+        System.out.println(employee.getId() + " " + employee.getName());
+
+
 
 
     }
