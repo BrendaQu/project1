@@ -8,8 +8,8 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-public class ExpenseFormServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+public class ExpenseFormServlet extends HttpServlet{
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
@@ -47,7 +47,7 @@ public class ExpenseFormServlet extends HttpServlet {
                 "            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n" +
                 "                <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\n" +
                 "                    <li class=\"nav-item\">\n" +
-                "                        <a class=\"nav-link\" href=\"EmployeeLoginServlet\">Report</a>\n" +
+                "                        <a class=\"nav-link\" href=\"ProfileServlet\">Report</a>\n" +
                 "                    </li>\n" +
                 "                    <li class=\"nav-item\">\n" +
                 "                        <a class=\"nav-link\" href=\"LogoutServlet\">Logout</a>\n" +

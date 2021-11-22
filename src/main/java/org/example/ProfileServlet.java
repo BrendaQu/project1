@@ -1,7 +1,5 @@
 package org.example;
 
-import javax.servlet.RequestDispatcher;
-import javax.servlet.ServletException;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -10,20 +8,16 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
-public class EmployeeLoginServlet extends HttpServlet {
-    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+public class ProfileServlet extends HttpServlet {
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
 
-        String email = request.getParameter("email");
-        String password = request.getParameter("password");
+        List<Request> requests = HibernateUtil.getAllPendingRequests();
+        Cookie[] cookies = request.getCookies();
+        Integer empId = Integer.valueOf(cookies[0].getValue());
 
-        Employee employee = new Employee();
-        employee = HibernateUtil.getEmployee(email, password);
-        String empId = String.valueOf(employee.getId());
-
-        Cookie cookie = new Cookie("id", empId);
-        response.addCookie(cookie);
+        Employee employee = HibernateUtil.getEmployeeById(empId);
 
         if(employee.getType().equals("regular")) {
             out.println("<!DOCTYPE html>\n" +
@@ -80,7 +74,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "        </div>\n" +
                     "    </div>\n" +
                     "    <div class=\"expense-btn d-flex justify-content-end\">\n" +
-                    "        <button class=\"btn btn-primary p2\"><a href=\"ProfileServlet\">New Expense</a></button>\n" +
+                    "        <button class=\"btn btn-primary p2\"><a href=\"ExpenseFormServlet\">New Expense</a></button>\n" +
                     "        <button class=\"btn btn-primary p2\"><a href=\"AllPendingRequestsServlet\">View Pending Requests</a></button>\n" +
                     "    </div>\n" +
                     "    <div class=\"expense-history\">\n" +
@@ -102,13 +96,13 @@ public class EmployeeLoginServlet extends HttpServlet {
             List<Request> allRequests = HibernateUtil.getAllRequests(employee.getId());
             for(Request r : allRequests){
                 out.println("<tr>" +
-                            "<td>" + r.getRequestId() + "</td>" +
-                            "<td>" + r.getIncStartDate() + "</td>" +
-                            "<td>" + r.getIncEndDate() + "</td>" +
-                            "<td>" + r.getPurpose() + "</td>" +
-                            "<td>$" + r.getExpense() + "</td>" +
-                            "<td>" + r.getSubmitDate() + "</td>" +
-                            "<td>" + r.getStatus() + "</td>");
+                        "<td>" + r.getRequestId() + "</td>" +
+                        "<td>" + r.getIncStartDate() + "</td>" +
+                        "<td>" + r.getIncEndDate() + "</td>" +
+                        "<td>" + r.getPurpose() + "</td>" +
+                        "<td>$" + r.getExpense() + "</td>" +
+                        "<td>" + r.getSubmitDate() + "</td>" +
+                        "<td>" + r.getStatus() + "</td>");
             }
             out.println("</tbody>\n" +
                     "          </table>\n" +
@@ -188,6 +182,5 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "</html>");
         }
         out.close();
-        }
-
     }
+}

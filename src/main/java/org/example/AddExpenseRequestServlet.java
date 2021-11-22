@@ -40,9 +40,8 @@ public class AddExpenseRequestServlet extends HttpServlet {
 
         System.out.println(incStartDate + " " + incEndDate + " " + purpose + " " + expense + " " + todayDate);
 
-        RequestDispatcher rd = request.getRequestDispatcher("EmployeeLoginServlet");
-        rd.include(request,response);
-
+        response.sendRedirect("ExpenseFormServlet");
+        
         out.println("<p>expense submitted</p>");
 
 

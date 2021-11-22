@@ -83,4 +83,12 @@
         <servlet-name>ExpenseFormServlet</servlet-name>
         <url-pattern>/ExpenseFormServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>ProfileServlet</servlet-name>
+        <servlet-class>org.example.ProfileServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ProfileServlet</servlet-name>
+        <url-pattern>/ProfileServlet</url-pattern>
+    </servlet-mapping>
 </web-app>
