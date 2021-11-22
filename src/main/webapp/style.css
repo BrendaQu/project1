@@ -202,3 +202,14 @@ input[type=""]:focus  {
 .manger-menu a:hover{
     color: #FEFFFF;
 }
+
+/*Approval buttons*/
+.reject-button .btn,
+.approve-button .btn {
+    width: 100px;
+}
+
+.reject-button .btn:hover,
+.reject-button .btn:focus {
+    background-color: #af3a40;
+}

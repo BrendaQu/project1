@@ -63,14 +63,14 @@ public class ExpenseFormServlet extends HttpServlet{
                 "                <h3>"+employee.getName()+"</h3>\n" +
                 "            </div>\n" +
                 "            <div class=\"profile-info-item1 col-2\">\n" +
-                "                <p>Title: "+employee.getTitle()+"</p>\n" +
-                "                <p>Start Date: " + employee.getEmpStartDate()+ "</p>\n" +
-                "                <p>Country: "+employee.getCountry()+"</p>\n" +
+                "                <p><strong> Title </strong>: &nbsp;"+employee.getTitle()+"</p>\n" +
+                "                <p><strong> Start Date </strong>: &nbsp;" + employee.getEmpStartDate()+ "</p>\n" +
+                "                <p><strong> Country </strong>: &nbsp;"+employee.getCountry()+"</p>\n" +
                 "            </div>\n" +
                 "            <div class=\"profile-info-item2 col-8\">\n" +
-                "                <p>ID: "+employee.getId()+"</p>\n" +
-                "                <p>Email: "+employee.getEmail()+"</p>\n" +
-                "                <p>Phone: "+employee.getPhone()+"</p>\n" +
+                "                <p><strong> Employee ID </strong>: &nbsp;"+employee.getId()+"</p>\n" +
+                "                <p><strong> Email </strong>: &nbsp;"+employee.getEmail()+"</p>\n" +
+                "                <p><strong> Phone </strong>: &nbsp;"+employee.getPhone()+"</p>\n" +
                 "            </div>\n" +
                 "        </div>\n" +
                 "    </div>\n" +
