@@ -75,9 +75,9 @@ public class AllPendingRequestsServlet extends HttpServlet {
                 "        <button class=\"btn btn-primary p2\"><a href=\"ExpenseFormServlet\">New Expense</a></button>\n" +
                 "        <button class=\"btn btn-primary p2\"><a href=\"AllPendingRequestsServlet\">View Pending Requests</a></button>\n" +
                 "    </div>\n" +
-                "    <div class=\"expense-history\">\n" +
+                "    <div class=\"expense-table\">\n" +
                 "        <h2>Pending Expense Reimbursements</h2>\n" +
-                "        <table class=\"table\">\n" +
+                "        <table class=\"table table-hover\">\n" +
                 "            <thead>\n" +
                 "              <tr>\n" +
                 "                <th>Request ID</th>\n" +

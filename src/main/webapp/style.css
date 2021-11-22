@@ -213,3 +213,13 @@ input[type=""]:focus  {
 .reject-button .btn:focus {
     background-color: #af3a40;
 }
+
+/*Approval Forms*/
+.approval-reject-form {
+    margin-left: 20px;
+}
+
+/*Table formatting*/
+.expense-table h2 {
+    color: #3AAFA9;
+}

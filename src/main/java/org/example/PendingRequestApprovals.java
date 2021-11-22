@@ -98,9 +98,9 @@ public class PendingRequestApprovals extends HttpServlet {
                         "        </form>\n" +
                         "    </div>\n" +
                         "    <br />"+
-                "    <div class=\"expense-manager-pending\">\n" +
+                "    <div class=\"expense-table\">\n" +
                 "        <h2>Expense Reimbursement Pending</h2>\n" +
-                "        <table class=\"table\">\n" +
+                "        <table class=\"table table-hover\">\n" +
                 "            <thead>\n" +
                 "              <tr>\n" +
                 "                <th>Request ID</th>\n" +

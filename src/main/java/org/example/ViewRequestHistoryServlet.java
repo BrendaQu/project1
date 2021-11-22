@@ -74,9 +74,9 @@ public class ViewRequestHistoryServlet extends HttpServlet {
                 "        </div>\n" +
                 "        </div>\n" +
                 "    </div>\n" +
-                "    <div class=\"expense-manager-history\">\n" +
+                "    <div class=\"expense-table\">\n" +
                 "        <h2>Expense Reimbursement History</h2>\n" +
-                "        <table class=\"table\">\n" +
+                "        <table class=\"table table-hover\">\n" +
                 "            <thead>\n" +
                 "              <tr>\n" +
                 "                <th>Request ID</th>\n" +
