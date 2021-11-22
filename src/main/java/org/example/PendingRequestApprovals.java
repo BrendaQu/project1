@@ -45,7 +45,7 @@ public class PendingRequestApprovals extends HttpServlet {
                 "            <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n" +
                 "                <ul class=\"navbar-nav ms-auto mb-2 mb-lg-0\">\n" +
                 "                    <li class=\"nav-item\">\n" +
-                "                        <a class=\"nav-link\" href=\"manager-page.html\">Menu</a>\n" +
+                "                        <a class=\"nav-link\" href=\"EmployeeLoginServlet\">Menu</a>\n" +
                 "                    </li>\n" +
                 "                    <li class=\"nav-item\">\n" +
                 "                        <a class=\"nav-link\" href=\"LogoutServlet\">Logout</a>\n" +

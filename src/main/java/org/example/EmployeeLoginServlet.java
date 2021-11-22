@@ -80,7 +80,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "        </div>\n" +
                     "    </div>\n" +
                     "    <div class=\"expense-btn d-flex justify-content-end\">\n" +
-                    "        <button class=\"btn btn-primary p2\"><a href=\"expense-form.html\">New Expense</a></button>\n" +
+                    "        <button class=\"btn btn-primary p2\"><a href=\"ExpenseFormServlet\">New Expense</a></button>\n" +
                     "        <button class=\"btn btn-primary p2\"><a href=\"AllPendingRequestsServlet\">View Pending Requests</a></button>\n" +
                     "    </div>\n" +
                     "    <div class=\"expense-history\">\n" +
@@ -177,7 +177,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "    <div class=\"manger-menu\">\n" +
                     "        <button class=\"btn btn-outline-secondary\"><a href=\"ViewRequestHistoryServlet\">View Requests History</a></button>\n" +
                     "        <button class=\"btn btn-outline-primary\"><a href=\"PendingRequestApprovals\">View Pending Requests</a></button>\n" +
-                    "        <button class=\"btn btn-outline-primary\"><a href=\"expense-form.html\">New Expense Report</a></button>\n" +
+                    "        <button class=\"btn btn-outline-primary\"><a href=\"ExpenseFormServlet\">New Expense Report</a></button>\n" +
                     "    </div>\n" +
                     "\n" +
                     "    <footer>\n" +

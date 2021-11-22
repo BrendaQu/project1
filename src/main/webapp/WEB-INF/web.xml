@@ -67,11 +67,20 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>LogoutServlet</servlet-name>
-        <servlet-class>org.example.LogoutServlet</servlet-class>
-    </servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <servlet-class>org.example.LogoutServlet</servlet-class>
+</servlet>
     <servlet-mapping>
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ExpenseFormServlet </servlet-name>
+        <servlet-class>org.example.ExpenseFormServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExpenseFormServlet</servlet-name>
+        <url-pattern>/ExpenseFormServlet</url-pattern>
     </servlet-mapping>
 </web-app>

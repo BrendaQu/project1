@@ -72,7 +72,7 @@ public class AllPendingRequestsServlet extends HttpServlet {
                 "        </div>\n" +
                 "    </div>\n" +
                 "    <div class=\"expense-btn d-flex justify-content-end\">\n" +
-                "        <button class=\"btn btn-primary p2\"><a href=\"expense-form.html\">New Expense</a></button>\n" +
+                "        <button class=\"btn btn-primary p2\"><a href=\"ExpenseFormServlet\">New Expense</a></button>\n" +
                 "        <button class=\"btn btn-primary p2\"><a href=\"AllPendingRequestsServlet\">View Pending Requests</a></button>\n" +
                 "    </div>\n" +
                 "    <div class=\"expense-history\">\n" +
