@@ -7,7 +7,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
-
+//update request status from pending to rejected
 public class RejectRequestServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -23,6 +23,6 @@ public class RejectRequestServlet extends HttpServlet {
 
         response.sendRedirect("PendingRequestApprovals");
 
-        out.println("<p>" + s_id + " rejected </p>");
+        out.close();
     }
 }

@@ -8,6 +8,7 @@ import org.hibernate.query.Query;
 import java.util.List;
 
 public class HibernateUtil {
+    //add employees to employee table
     public static void addEmployee(Employee employee){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
 
@@ -19,6 +20,7 @@ public class HibernateUtil {
         t.commit();
         session.close();
     }
+    //update employee in database
     public static void updateEmployee(Employee employee){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
 
@@ -32,6 +34,7 @@ public class HibernateUtil {
         session.close();
     }
 
+    //get employee by email and password
     public static Employee getEmployee(String email, String password){
         Employee employee = new Employee();
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
@@ -49,7 +52,7 @@ public class HibernateUtil {
         return employee;
 
     }
-
+    //get employee by id
     public static Employee getEmployeeById(int empId){
         Employee employee = new Employee();
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
@@ -66,7 +69,7 @@ public class HibernateUtil {
         return employee;
 
     }
-
+    //add new request into request table
     public static void addRequest(int empId, Request request){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();
@@ -80,7 +83,7 @@ public class HibernateUtil {
         session.close();
 
     }
-
+    //get all requests from request table for a specific employee
     public static List<Request> getAllRequests(int empId){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();
@@ -97,7 +100,7 @@ public class HibernateUtil {
 
         return requests;
     }
-
+    //get only requests will pending status from specific employee
     public static List<Request> getPendingRequests(int empId){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();
@@ -115,7 +118,7 @@ public class HibernateUtil {
 
         return requests;
     }
-
+    //get all employee's requests
     public static List<Request> getRequestHistory() {
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();
@@ -131,7 +134,7 @@ public class HibernateUtil {
 
         return requests;
     }
-
+    //get all employee requests will pending status
     public static List<Request> getAllPendingRequests() {
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();
@@ -148,7 +151,7 @@ public class HibernateUtil {
 
         return requests;
     }
-
+    //update the status of requests
     public static void updateRequestStatus(int requestId, String status){
         SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
         Session session = sessionFactory.openSession();

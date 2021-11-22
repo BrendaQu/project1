@@ -9,6 +9,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+//Add expense form information into database
 public class AddExpenseRequestServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -38,12 +39,10 @@ public class AddExpenseRequestServlet extends HttpServlet {
 
         HibernateUtil.addRequest(empId, r);
 
-        System.out.println(incStartDate + " " + incEndDate + " " + purpose + " " + expense + " " + todayDate);
-
+        //redirect back to expense form servlet to submit another response
         response.sendRedirect("ExpenseFormServlet");
-        
-        out.println("<p>expense submitted</p>");
 
+        out.close();
 
     }
 }

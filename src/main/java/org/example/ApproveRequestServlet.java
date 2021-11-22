@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+//change request status from pending to approved
 public class ApproveRequestServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -18,6 +19,7 @@ public class ApproveRequestServlet extends HttpServlet {
 
         HibernateUtil.updateRequestStatus(requestId,"approved");
 
+        //redirect back to pending approvals list
         response.sendRedirect("PendingRequestApprovals");
 
         out.close();

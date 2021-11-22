@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
 
+//get employee email and password to login
 public class EmployeeLoginServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
         response.setContentType("text/html");
@@ -25,6 +26,7 @@ public class EmployeeLoginServlet extends HttpServlet {
         Cookie cookie = new Cookie("id", empId);
         response.addCookie(cookie);
 
+        //page for regular employee
         if(employee.getType().equals("regular")) {
             out.println("<!DOCTYPE html>\n" +
                     "<html lang=\"en\">\n" +
@@ -120,6 +122,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "    <script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js\"integrity=\"sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p\" crossorigin=\"anonymous\"></script>\n" +
                     "</body>\n" +
                     "</html>");
+            //page for finance manager
         } else if(employee.getType().equals("approver")){
             out.println("<!DOCTYPE html>\n" +
                     "<html lang=\"en\">\n" +

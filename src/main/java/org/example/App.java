@@ -25,6 +25,7 @@ public class App
 
         Transaction t = session.beginTransaction();
 
+        //Add employee into database
         Integer id = 115;
         String name = "Emma Li";
         String email = "emma@one.com";
@@ -48,7 +49,7 @@ public class App
         employee.setTitle(title);
         employee.setType(type);
 
-      HibernateUtil.addEmployee(employee);*/
+        HibernateUtil.addEmployee(employee);*/
 
 /*
         HibernateUtil.updateRequestStatus(3,"approved");*/
