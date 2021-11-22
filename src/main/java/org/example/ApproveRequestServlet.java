@@ -18,11 +18,8 @@ public class ApproveRequestServlet extends HttpServlet {
 
         HibernateUtil.updateRequestStatus(requestId,"approved");
 
-        RequestDispatcher rd = request.getRequestDispatcher("PendingRequestApprovals");
-        rd.include(request,response);
+        response.sendRedirect("PendingRequestApprovals");
 
-        out.println("<p>" + s_id + " approved </p>");
-
-
+        out.close();
     }
 }

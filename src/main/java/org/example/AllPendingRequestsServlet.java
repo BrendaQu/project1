@@ -47,7 +47,7 @@ public class AllPendingRequestsServlet extends HttpServlet {
                 "                        <a class=\"nav-link\" href=\"EmployeeLoginServlet\">Report</a>\n" +
                 "                    </li>\n" +
                 "                    <li class=\"nav-item\">\n" +
-                "                        <a class=\"nav-link\" href=\"index.html\">Logout</a>\n" +
+                "                        <a class=\"nav-link\" href=\"LogoutServlet\">Logout</a>\n" +
                 "                    </li>\n" +
                 "                </ul>\n" +
                 "            </div>\n" +
@@ -65,6 +65,7 @@ public class AllPendingRequestsServlet extends HttpServlet {
                 "                <p>Country:"  + employee.getCountry() + "</p>\n" +
                 "        </div>\n" +
                 "        <div class=\"profile-info-item2 col-8\">\n" +
+                "            <p>Employee ID:" + employee.getId() + "</p>\n" +
                 "            <p>Email:" + employee.getEmail() + "</p>\n" +
                 "            <p>Phone:" + employee.getPhone() + "</p>\n" +
                 "        </div>\n" +

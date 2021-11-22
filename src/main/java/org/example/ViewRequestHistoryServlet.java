@@ -50,7 +50,7 @@ public class ViewRequestHistoryServlet extends HttpServlet {
                 "                        <a class=\"nav-link\" href=\"manager-page.html\">Menu</a>\n" +
                 "                    </li>\n" +
                 "                    <li class=\"nav-item\">\n" +
-                "                        <a class=\"nav-link\" href=\"index.html\">Logout</a>\n" +
+                "                        <a class=\"nav-link\" href=\"LogoutServlet\">Logout</a>\n" +
                 "                    </li>\n" +
                 "                </ul>\n" +
                 "            </div>\n" +
@@ -68,6 +68,7 @@ public class ViewRequestHistoryServlet extends HttpServlet {
                 "                <p>Country:" + employee.getCountry() +"</p>\n" +
                 "        </div>\n" +
                 "        <div class=\"profile-info-item2 col-8\">\n" +
+                "            <p>Employee ID:" + employee.getId() +"</p>\n" +
                 "            <p>Email:" + employee.getEmail() +"</p>\n" +
                 "            <p>Phone:" + employee.getPhone() +"</p>\n" +
                 "        </div>\n" +
@@ -79,6 +80,7 @@ public class ViewRequestHistoryServlet extends HttpServlet {
                 "            <thead>\n" +
                 "              <tr>\n" +
                 "                <th>Request ID</th>\n" +
+                "                <th>Employee ID</th>\n" +
                 "                <th>Incurred Start Date</th>\n" +
                 "                <th>Incurred End Date</th>\n" +
                 "                <th>Purpose</th>\n" +
@@ -91,6 +93,7 @@ public class ViewRequestHistoryServlet extends HttpServlet {
             for(Request r: requests){
                 out.println("<tr>" +
                         "<td>" + r.getRequestId() + "</td>" +
+                        "<td>" + r.getEmployee().getId() + "</td>" +
                         "<td>" + r.getIncStartDate() + "</td>" +
                         "<td>" + r.getIncEndDate() + "</td>" +
                         "<td>" + r.getPurpose() + "</td>" +

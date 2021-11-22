@@ -21,6 +21,8 @@ public class RejectRequestServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("PendingRequestApprovals");
         rd.include(request,response);
 
+        response.sendRedirect("PendingRequestApprovals");
+
         out.println("<p>" + s_id + " rejected </p>");
     }
 }
