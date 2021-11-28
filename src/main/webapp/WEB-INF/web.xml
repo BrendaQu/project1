@@ -91,4 +91,20 @@
         <servlet-name>ProfileServlet</servlet-name>
         <url-pattern>/ProfileServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <servlet-name>SearchEmployeeServlet</servlet-name>
+        <servlet-class>org.example.SearchEmployeeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchEmployeeServlet</servlet-name>
+        <url-pattern>/SearchEmployeeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>SearchEmployeeResultServlet</servlet-name>
+        <servlet-class>org.example.SearchEmployeeResultServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SearchEmployeeResultServlet</servlet-name>
+        <url-pattern>/SearchEmployeeResultServlet</url-pattern>
+    </servlet-mapping>
 </web-app>

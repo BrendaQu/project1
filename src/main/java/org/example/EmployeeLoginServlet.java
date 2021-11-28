@@ -181,6 +181,7 @@ public class EmployeeLoginServlet extends HttpServlet {
                     "        <button class=\"btn btn-outline-secondary\"><a href=\"ViewRequestHistoryServlet\">View Requests History</a></button>\n" +
                     "        <button class=\"btn btn-outline-primary\"><a href=\"PendingRequestApprovals\">View Pending Requests</a></button>\n" +
                     "        <button class=\"btn btn-outline-primary\"><a href=\"ExpenseFormServlet\">New Expense Report</a></button>\n" +
+                    "        <button class=\"btn btn-outline-primary\"><a href=\"SearchEmployeeServlet\">Search Employee</a></button>" +
                     "    </div>\n" +
                     "\n" +
                     "    <footer>\n" +
