@@ -5,6 +5,8 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
+import java.util.List;
+
 /**
  * Hello world!
  *
@@ -54,7 +56,11 @@ public class App
 /*
         HibernateUtil.updateRequestStatus(3,"approved");*/
 
-
+        // get request by Employee Id test
+        List<Request> requests = HibernateUtil.getRequestsByEmployeeId(101);
+        for(Request r: requests){
+            System.out.println( "Employee ID: " + r.getEmployee().getId() + " Request Id: " +  r.getRequestId());
+        }
 
     }
 }

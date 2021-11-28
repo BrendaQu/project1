@@ -165,4 +165,22 @@ public class HibernateUtil {
         txn.commit();
         session.close();
     }
+
+    //get all requests of a specific employee
+    public static List<Request> getRequestsByEmployeeId(int empId) {
+        SessionFactory sessionFactory = ConnectionFactory.sessionFactory();
+        Session session = sessionFactory.openSession();
+
+        Transaction txn = session.beginTransaction();
+
+        String hql = "from Request where empId= :empId";
+        Query query = session.createQuery(hql);
+        query.setParameter("empId", empId);
+        List requests = query.list();
+
+        txn.commit();
+        session.close();
+
+        return requests;
+    }
 }
