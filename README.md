@@ -1,14 +1,14 @@
-#PROJECT ONE: 
+# PROJECT ONE: 
 
-##Project Description
+## Project Description
 
-##Technologies Used
+## Technologies Used
 
-##Features Implemented
+## Features Implemented
 
-##How to Get Started
+## How to Get Started
 
-##Usage of Project
+## Usage of Project
 
 
 
