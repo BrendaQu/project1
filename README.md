@@ -13,6 +13,12 @@ The Expense Reimbursement System (ERS) manages reimbursements for employees on c
 - MySQL
 
 ## Features Implemented
+- Submit new reimbursement request
+- View past reimbursement requests
+- View pending reimbursement requests
+- Show employee's information in header
+- Approve / Reject reimbursement request
+- Search for employee's reimbursement request by employee Id
 
 ## How to Get Started
 
