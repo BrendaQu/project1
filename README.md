@@ -1,7 +1,7 @@
-# PROJECT ONE: 
+# PROJECT ONE: Expense Reimbursement System (ERS) 
 
 ## Project Description
-
+  
 ## Technologies Used
 
 ## Features Implemented
