@@ -25,6 +25,7 @@ List of features
 ## How to Get Started
 To run this project have Apache Tomcat 9.0 and Java runtime environment installed.
 Clone the project with the command below:
+
 git clone https://github.com/BrendaQu/project1.git 
 
 ## Contributors
