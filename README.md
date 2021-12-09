@@ -9,10 +9,12 @@ The Expense Reimbursement System (ERS) manages reimbursements for employees on c
 - Hibernate
 - HTML / CSS
 - Java
-- Java Servlet API
+- Java Servlet
+- Maven
 - MySQL
 
 ## Features Implemented
+List of features 
 - Submit new reimbursement request
 - View past reimbursement requests
 - View pending reimbursement requests
@@ -21,8 +23,13 @@ The Expense Reimbursement System (ERS) manages reimbursements for employees on c
 - Search for employee's reimbursement request by employee Id
 
 ## How to Get Started
+To run this project have Apache Tomcat 9.0 and Java 8 runtime environemtn installed.
+Clone the project with the command below:
+git clone https://github.com/BrendaQu/project1.git 
 
-## Usage of Project
+## Contributor
+Brenda Quach
+
 
 
 
