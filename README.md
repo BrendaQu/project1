@@ -23,7 +23,7 @@ List of features
 - Search for employee's reimbursement request by employee Id
 
 ## How to Get Started
-To run this project have Apache Tomcat 9.0 and Java 8 runtime environemtn installed.
+To run this project have Apache Tomcat 9.0 and Java 8 runtime environment installed.
 Clone the project with the command below:
 git clone https://github.com/BrendaQu/project1.git 
 
